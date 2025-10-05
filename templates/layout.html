@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>{{model.title}}</h1>
+    </div>
+</div>
+{% endblock %}
+student_00_440cb1c7e2ef@cloudshell:~/gcp-course/devops-repo (qwiklabs-gcp-02-d3adc51cb94f)$ cat templates/layout.html 
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{model.title}}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container">
+
+        {% block content %}{% endblock %}
+
+        <footer></footer>
+    </div>
+</body>
+</html>
